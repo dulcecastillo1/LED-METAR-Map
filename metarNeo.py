@@ -3,7 +3,7 @@ import board
 import requests 
 from fractions import Fraction 
 
-#set up the neopixels - will be approx. 15 total
+#set up the neopixels 
 pixels = neopixel.NeoPixel(board.D10, 6, brightness = 0.01, pixel_order = neopixel.RGBW) 
 
 #list the urls for bay area airports 
