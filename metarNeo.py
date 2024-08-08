@@ -101,7 +101,7 @@ def run():
 				i += 1
 				
 		
-	#search for visibility 
+	#search for visibility in each report 
 	num_vis1 = searchVis(1)
 	num_vis2 = searchVis(2)
 	num_vis3 = searchVis(3)
@@ -362,16 +362,16 @@ def run():
 	def white(x): 
 		pixels[x] = ((0, 0, 0, 127))
 
+	#check the flight categories for each airport 
 	def check(x): 
-		#check for the different visibility and ceiling conditions
-		#neopixel 0 
 		print('') 
 		ceiling = ''
 		ceilingString = ''
 		height = ''
 		num_vis = 0
 		num_height = 0
-		
+
+		#check what airport is being checked based on the number passed in
 		if x == 1: 
 			print("KCVH")
 			ceiling = ceiling1 
@@ -415,7 +415,7 @@ def run():
 			num_vis = num_vis6
 			num_height = num_height6
 
-			
+		#check the ceiling height and visibility to determine the flight category 
 		if num_vis < 1: 
 			if ceiling == "No ceiling": 
 				print("Ceiling: " + ceiling)
@@ -497,7 +497,7 @@ def run():
 	print("IFR  - Red") 
 	print("LIFR - Purple  (Worst) ") 
 
-#refresh every 5 minutes
+#refresh API requests/code every 5 minutes 
 while True:
 	run()
 	import time
