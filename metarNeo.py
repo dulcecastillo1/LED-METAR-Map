@@ -358,9 +358,6 @@ def run():
 		
 	def purple(x):
 		pixels[x] = ((127, 0, 127, 0))
-		
-	def white(x): 
-		pixels[x] = ((0, 0, 0, 127))
 
 	#check the flight categories for each airport 
 	def check(x): 
